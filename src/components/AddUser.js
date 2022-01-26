@@ -23,11 +23,11 @@ export const AddUser = ({addUser, back, checkEmail}) => {
   const handleButtonClick = () => {
     // При отправке проверяем email на валидность и на наличие такого в нашем списке
     if (!validate(email)) {
-      Alert.alert('Некорректный email', [
+      Alert.alert('Ошибка', 'Некорректный email', [
         {text: 'OK', onPress: () => console.log('OK Pressed')},
       ]);
     } else if (checkEmail(email)) {
-      Alert.alert('Email уже используется', [
+      Alert.alert('Ошибка', 'Email уже используется', [
         {text: 'OK', onPress: () => console.log('OK Pressed')},
       ]);
     } else {
